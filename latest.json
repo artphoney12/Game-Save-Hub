@@ -1,15 +1,20 @@
-{
-  "appName": "GameSave Hub",
-  "version": "1.0.0",
-  "releaseDate": "2026-05-16",
-  "serverPackage": "GameSaveHub.Server-v1.0.0.zip",
-  "clientPackage": "",
-  "serverSha256": "762AE8D4DD70D26E88207BDDFFB3D15AA7ACC4BD3BD3600ADD440EC206DAE452",
-  "clientSha256": "",
-  "isRequired": false,
-  "notes": [
-    "Initial GameSave Hub Server release.",
-    "Added dark blue cyan neon server interface.",
-    "Added user management, game list, settings, logs, and update checker."
-  ]
+﻿{
+    "appName":  "GameSave Hub",
+    "version":  "1.0.2",
+    "releaseDate":  "2026-05-16",
+    "serverPackage":  "GameSaveHub.Server-v1.0.2.zip",
+    "clientPackage":  "",
+    "serverSha256":  "9BBD65E5121C41AC701F88AE38EB1B2C1B2714CAA13699A253CAC94EE27E1574",
+    "clientSha256":  "",
+    "isRequired":  false,
+    "notes":  [
+                  "Added application language setting with English and Indonesian options.",
+                  "Localized server UI text, status labels, dialogs, and footer messages.",
+                  "Fixed language dropdown colors for the dark neon theme.",
+                  "Fixed the language dropdown colors for the dark neon theme.",
+                  "Removed helper text under Settings action buttons for a cleaner layout.",
+                  "Changed the GitHub button to open the GameSaveHub-Releases repository.",
+                  "Simplified the server subtitle in both English and Indonesian.",
+                  "Added README and changelog files to the release package."
+              ]
 }
