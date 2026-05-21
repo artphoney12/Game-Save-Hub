@@ -1,15 +1,15 @@
-﻿{
-    "appName":  "GameSave Hub",
-    "version":  "1.0.5",
-    "releaseDate":  "2026-05-16",
-    "serverPackage":  "https://github.com/keenocrack2/GameSaveHub-Releases/releases/download/v1.0.5/GameSaveHub.Server-v1.0.5.zip",
-    "clientPackage":  "",
-    "serverSha256":  "DB955E7B392E5466C93B4E6A8E6BDB718EA10D51D0138A70975C445A5A17288E",
-    "clientSha256":  "",
-    "isRequired":  false,
-    "notes":  [
-                  "Fixed update checks that could read an older cached latest.json from raw.githubusercontent.com.",
-                  "Added automatic GitHub raw URL fallback for update metadata.",
-                  "Improved update package URL handling for both relative and full GitHub Release asset links."
-              ]
+{
+  "appName": "GameSave Hub",
+  "version": "1.5.5",
+  "releaseDate": "2026-05-21",
+  "serverPackage": "GameSaveHub.Server-v1.5.5.zip",
+  "clientPackage": "GameSaveHub-v1.5.5.zip",
+  "serverSha256": "A2E247426906399AFC933F94454970639ABB2379B1382A2CC0ABD2DB7674A0C0",
+  "clientSha256": "6DE43DE2D8031B3A98A1B5BAB51DB655D3377E0E228E3EA786B864E219AF5A0A",
+  "isRequired": false,
+  "notes": [
+    "HWID now combines MachineGuid and CPU ProcessorId for stronger one-device activation.",
+    "Server no longer copies old ProgramData update cache on first startup.",
+    "Updates folder is created only when update flow is used."
+  ]
 }
