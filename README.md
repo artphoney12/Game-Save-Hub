@@ -14,22 +14,29 @@ Each player can use their own account, choose a game, select a save slot, and ke
 
 ### GameSave Hub Server
 
-The server manages users, game lists, save locations, save quotas, license activation, and client access.
+The server manages users, game lists, save locations, settings/config folders, save quotas, license activation, payment access, updates, and client access.
 
 Main server features:
 
 - User account management
 - Game save location management
+- Additional settings/config folder management per game
+- Import and export game list from `svClient.ini`
 - Real-time game title search
 - Per-user save storage
 - Up to 10 save slots per user per game
 - Slot add, delete, and rename
 - Global or per-user save quota (MB / GB)
+- Global or per-user upload/download speed limit
+- Activity logs for server and client save/load summaries
 - Admin password protection
 - Internet cafe name branding in app title
 - License tab with activation status and usage rules
 - One-license-one-HWID activation
+- Built-in payment page access for QRIS and PayPal
+- Offline/payment connection fallback message in the embedded payment view
 - Self-update from official update source
+- Server self-update also extracts the latest Client package automatically
 - Single-instance protection
 
 ### GameSave Hub Client
@@ -42,13 +49,18 @@ Main client features:
 - User login and account creation
 - Game list loaded from server
 - Search box for offline game titles
-- Local save folder preparation after connection
+- Local save folder and settings folder preparation after connection
 - Manual Save Now and Load Now
 - Auto Save + Load mode
 - Save slot selection (Slot 1 to Slot 10)
 - Slot add, delete, and rename
+- Support for main save folder plus additional settings/config folders
+- Open save folder and open settings folder actions
 - Blocking progress window with percentage and transfer speed
 - Strong success and failure notifications
+- Skips locked nonessential files such as `.log`, `.tmp`, and `.lock` after retry attempts
+- Shows warning/error when important save files remain locked and cannot be copied
+- Activity logs for save/load results and skipped locked files
 - English / Indonesia language setting
 - Single-instance protection
 
