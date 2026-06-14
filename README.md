@@ -1,84 +1,87 @@
 # GameSave Hub
 
-GameSave Hub is a desktop application for managing offline game save data in internet cafes, gaming centers, and both diskless and non-diskless PC environments.
+GameSave Hub is a desktop application for managing offline game save data in internet cafes, gaming centers, and diskless or non-diskless PC environments.
 
-It is designed for shared gaming PCs where many players use different client machines, and where local files may reset after restart. The server stores save data centrally, while the client helps players load and save progress without manual file handling.
+The Server stores save data centrally, while the Client allows players to save and restore their progress across different PCs.
 
 ## Purpose
 
-GameSave Hub makes game save handling easier, cleaner, and more consistent across multiple PCs.
+GameSave Hub provides consistent and organized game save management for shared gaming PCs, including systems where local data may reset after a restart.
 
-Each player can use their own account, choose a game, select a save slot, and keep progress available even when moving to another PC.
+Each player can use a personal account, select a game and save slot, and access their progress from another Client PC.
 
 ## Applications
 
 ### GameSave Hub Server
 
-The server manages users, game lists, save locations, settings/config folders, save quotas, license activation, payment access, updates, and client access.
+The Server manages users, games, save locations, settings folders, quotas, licenses, updates, payments, and Client access.
 
-Main server features:
+#### Main Server Features
 
 - User account management
 - Game save location management
-- Additional settings/config folder management per game
-- Import and export game list from `svClient.ini`
+- Multiple settings/config folder locations per game
+- Import and export game lists using `svClient.ini`
 - Real-time game title search
-- Per-user save storage
-- Up to 10 save slots per user per game
-- Slot add, delete, and rename
-- Global or per-user save quota (MB / GB)
-- Global or per-user upload/download speed limit
-- Activity logs for server and client save/load summaries
+- Separate save storage for each user
+- Up to 10 save slots per user and game
+- Add, delete, and rename save slots
+- Global or per-user save storage quotas in MB or GB
+- Global or per-user upload and download speed limits
+- Server and Client save/load activity summaries
 - Admin password protection
-- Internet cafe name branding in app title
-- License tab with activation status and usage rules
+- Custom internet cafe name in the application title
+- License activation status and usage information
 - One-license-one-HWID activation
-- Built-in payment page access for QRIS and PayPal
-- Offline/payment connection fallback message in the embedded payment view
-- Self-update from official update source
-- Server self-update also extracts the latest Client package automatically
-- Single-instance protection
+- Built-in QRIS and PayPal payment access
+- Self-update from the official update source
+- Automatic extraction of the latest Client package during Server updates
+- English and Indonesian language support
 
 ### GameSave Hub Client
 
-The client connects to the server, allows user login, displays offline game list, and handles save/load operations.
+The Client connects to the Server, handles user sessions, displays available games, and manages save/load operations.
 
-Main client features:
+#### Main Client Features
 
-- Auto-connect to server
+- Automatic Server connection
+- Client and Server version compatibility check before the session is enabled
+- Clear warning when the Client version does not match the Server version
 - User login and account creation
-- Game list loaded from server
-- Search box for offline game titles
-- Local save folder and settings folder preparation after connection
-- Manual Save Now and Load Now
-- Auto Save + Load mode
-- Save slot selection (Slot 1 to Slot 10)
-- Slot add, delete, and rename
-- Support for main save folder plus additional settings/config folders
-- Open save folder and open settings folder actions
-- Blocking progress window with percentage and transfer speed
-- Strong success and failure notifications
-- Skips locked nonessential files such as `.log`, `.tmp`, and `.lock` after retry attempts
-- Shows warning/error when important save files remain locked and cannot be copied
-- Activity logs for save/load results and skipped locked files
-- English / Indonesia language setting
-- Single-instance protection
+- Game list loaded from the Server
+- Fast offline game search
+- Automatic preparation of save and settings folders
+- Manual **Save Now** and **Load Now**
+- **Auto Save** every 45 seconds
+- Load operations remain manual through **Load Now**
+- Save slot selection from Slot 1 to Slot 10
+- Add, delete, and rename save slots
+- Support for one main save folder and multiple settings/config folders
+- Open save folder and settings folder actions
+- Transfer progress with percentage and transfer speed
+- Clear success and failure notifications
+- Retry and permissive reading for locked files
+- Automatic skipping of locked nonessential files such as `.log`, `.tmp`, and `.lock`
+- Warning or error when important save files remain locked
+- Client and Server activity logs for save/load results
+- English and Indonesian language support
 
-Save files are synchronized as real files (not zip archives).
+## Save and Load via Google Drive
 
-## Screenshots
+GameSave Hub v2.0.1 includes optional Google Drive save/load directly from the Client.
 
-### GameSave Hub Server
+Google Drive support uses `rclone`, which is already bundled with GameSave Hub. Users do not need to download or install rclone separately.
 
-![](https://i.ibb.co.com/XZ153GGM/Game-Save-Hub-Server-VWYNWVRWK8.png)
-![](https://i.ibb.co.com/sdDjCKc2/Game-Save-Hub-Server-WSFPn-Zb2qh.png)
-![](https://i.ibb.co.com/qwX31G5/Game-Save-Hub-Server-i8wt-Kv-RASF.png)
+### Google Drive Features
 
-### GameSave Hub Client
-
-![](https://i.ibb.co.com/GwPvyqd/Game-Save-Hub-r-Cy2-Puwnh-Y.png)
-![](https://i.ibb.co.com/W4SMHyBz/Game-Save-Hub-l-KEENC7-A5-A.png)
-
-### License / Activation
-
-![](https://i.ibb.co.com/8nhNXKzv/license.png)
+- Login and logout from Google Drive through the Client
+- Google authentication through a dedicated Microsoft Edge app window
+- Manual **Save to Google Drive**
+- Manual **Load from Google Drive**
+- Optional automatic Google Drive synchronization after a successful Auto Save
+- Auto Save runs every 45 seconds, saves to the Server first, and then uploads to Google Drive when cloud auto-save is enabled
+- Save and settings folders are stored separately using their Client path structure
+- Google Drive authorization is stored locally on the Client PC
+- Linked Google Drive account email is displayed in the Client
+- Google Drive storage usage, maximum capacity, available capacity, and usage percentage are displayed in the Client
+- Built-in Google Drive file manager for viewing and deleting app-managed cloud files
