@@ -2,19 +2,21 @@
 
 GameSave Hub is a desktop application for managing offline game save data in internet cafes, gaming centers, and diskless or non-diskless PC environments.
 
-The Server stores save data centrally, while the Client allows players to save and restore their progress across different PCs.
+It helps operators keep player save data organized, centralized, and easier to restore across different Client PCs.
+
+The Server stores save data centrally, while the Client allows players to save and load their progress without manually copying folders.
 
 ## Purpose
 
-GameSave Hub provides consistent and organized game save management for shared gaming PCs, including systems where local data may reset after a restart.
+GameSave Hub is designed for shared gaming PCs where many players use different machines, and where local save data may reset after restart.
 
-Each player can use a personal account, select a game and save slot, and access their progress from another Client PC.
+With GameSave Hub, each player can use a personal account, select a game, choose a save slot, and continue their progress from another Client PC.
 
 ## Applications
 
 ### GameSave Hub Server
 
-The Server manages users, games, save locations, settings folders, quotas, licenses, updates, payments, and Client access.
+The Server is used by the operator or administrator to manage users, games, save locations, settings folders, quotas, licenses, updates, payments, and Client access.
 
 #### Main Server Features
 
@@ -40,7 +42,7 @@ The Server manages users, games, save locations, settings folders, quotas, licen
 
 ### GameSave Hub Client
 
-The Client connects to the Server, handles user sessions, displays available games, and manages save/load operations.
+The Client is used on player PCs to connect to the Server, log in, select games, and perform save/load operations.
 
 #### Main Client Features
 
@@ -70,6 +72,8 @@ The Client connects to the Server, handles user sessions, displays available gam
 
 GameSave Hub v2.0.1 includes optional Google Drive save/load directly from the Client.
 
+This feature is useful for customers who want an additional cloud backup option, or for players who want their selected save slot to be stored outside the local PC and Server storage.
+
 Google Drive support uses `rclone`, which is already bundled with GameSave Hub. Users do not need to download or install rclone separately.
 
 ### Google Drive Features
@@ -78,10 +82,28 @@ Google Drive support uses `rclone`, which is already bundled with GameSave Hub. 
 - Google authentication through a dedicated Microsoft Edge app window
 - Manual **Save to Google Drive**
 - Manual **Load from Google Drive**
-- Optional automatic Google Drive synchronization after a successful Auto Save
+- Optional automatic Google Drive upload after a successful Auto Save
 - Auto Save runs every 45 seconds, saves to the Server first, and then uploads to Google Drive when cloud auto-save is enabled
 - Save and settings folders are stored separately using their Client path structure
 - Google Drive authorization is stored locally on the Client PC
 - Linked Google Drive account email is displayed in the Client
 - Google Drive storage usage, maximum capacity, available capacity, and usage percentage are displayed in the Client
 - Built-in Google Drive file manager for viewing and deleting app-managed cloud files
+
+## Operator Benefits
+
+- Centralized save data management for multiple Client PCs
+- Easier player progress restoration across different PCs
+- Reduced manual folder copying for operators and customers
+- Support for diskless and non-diskless environments
+- Clear activity logs for save/load monitoring
+- Flexible save quota and transfer speed control
+- Optional Google Drive cloud backup for selected user, game, and slot data
+
+## Customer Benefits
+
+- Players can log in with their own account
+- Save progress can be loaded on another Client PC
+- Multiple save slots help separate different progress points
+- Manual Load prevents accidental overwrite from automatic loading
+- Google Drive support provides an optional cloud save/load option
